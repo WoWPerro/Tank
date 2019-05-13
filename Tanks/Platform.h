@@ -3,6 +3,8 @@
 #include "SDL.h"
 #include "Image.h"
 
+class Gamestate;
+
 class Platform
 {
 private:
@@ -16,6 +18,7 @@ public:
 	void RenderClear();
 	void RenderPresent();
 	void RenderImage(Image *image, int x, int y);
+	void CheckEvent(Gamestate *obj, bool (Gamestate::*f)(int));
 private:
 	void RenderTexture(Image * image, int x, int y, double a);
 	~Platform();

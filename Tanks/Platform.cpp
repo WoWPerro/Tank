@@ -53,6 +53,17 @@ void Platform::RenderTexture(Image * image, int x, int y, double a)
 	SDL_RenderCopyEx(renderer, image->GetTexture(), NULL, NULL, 0, NULL, SDL_FLIP_NONE);
 }
 
+void Platform::CheckEvent(Gamestate *obj, bool (Gamestate::*f)(int))
+{
+	//SDL_Event e;
+	//while (SDL_PollEvent(&e))
+	//{
+	//	if (e.type == SDL_KEYDOWN)
+	//	{
+	//	//	(obj->*f)(e.key.keysym.sym);
+	//	}
+	//}
+}
 
 Platform::~Platform()
 {

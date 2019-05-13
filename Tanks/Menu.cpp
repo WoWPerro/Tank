@@ -14,9 +14,10 @@ void Menu::Init(Platform * platform)
 	Background = new Image;
 }
 
-void Menu::Input()
+bool Menu::Input(int keyInput)
 {
 	std::cout << "Gamestate Menu Input";
+	return false;
 }
 
 void Menu::Update()

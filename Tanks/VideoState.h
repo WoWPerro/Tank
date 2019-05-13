@@ -4,7 +4,7 @@ class VideoState : public Gamestate
 {
 public:
 	VideoState();
-	void Input() override;
+	bool Input(int keyInput) override;
 	void Update() override;
 	void Draw() override;
 	void Init(Platform * platform) override;

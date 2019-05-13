@@ -11,10 +11,13 @@ void GameStateManager::GameLoop()
 {
 	while (true)
 	{
+		if (states.size() > 0) 
+		{
 		auto state = states.top();
-		state->Input();
-		state->Update();
-		state->Draw();
+		plataform->CheckEvent(state, &Gamestate::Input);
+		//state->Update();
+		//state->Draw();
+		}		
 	}
 }
 
@@ -26,22 +29,22 @@ void GameStateManager::SetState(Gamestate *state)
 
 void GameStateManager::RealeaseState()
 {
-	while (true) 
-	{
-		try
-		{
-			if (states.size() == 0)
-				throw std::exception("Error");
-			auto state = states.top();
-			state->Close();
-			states.pop();
-		}
-		catch (...)
-		{
-			std::cout << "Critical error Tank is closing";
-			break;
-		}
-	}
+	//while (true) 
+	//{
+	//	try
+	//	{
+	//		if (states.size() == 0)
+	//			throw std::exception("Error");
+	//		auto state = states.top();
+	//		state->Close();
+	//		states.pop();
+	//	}
+	//	catch (...)
+	//	{
+	//		std::cout << "Critical error Tank is closing";
+	//		break;
+	//	}
+	//}
 }
 
 GameStateManager::~GameStateManager()

@@ -6,9 +6,10 @@ Pause::Pause()
 {
 }
 
-void Pause::Input()
+bool Pause::Input(int keyInput)
 {
 	std::cout << "Gamestate Pause Input";
+	return false;
 }
 
 void Pause::Update()

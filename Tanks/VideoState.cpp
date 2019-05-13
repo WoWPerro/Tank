@@ -14,9 +14,10 @@ void VideoState::Init(Platform * platform)
 	background->LoadImage("../Assets/Images/tankMenu.png");
 }
 
-void VideoState::Input()
+bool VideoState::Input(int keyInput)
 {
 	std::cout << "Gamestate Video Input";
+	return false;
 }
 
 void VideoState::Update()

@@ -5,9 +5,10 @@ Game::Game()
 {
 }
 
-void Game::Input()
+bool Game::Input(int keyInput)
 {
 	std::cout << "Gamestate Game Input";
+	return false;
 }
 
 void Game::Update()

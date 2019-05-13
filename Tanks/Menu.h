@@ -8,7 +8,7 @@ private:
 	Platform *platform;
 public:
 	Menu();
-	void Input() override;
+	bool Input(int keyInput) override;
 	void Update() override;
 	void Draw() override;
 	void Init(Platform * platform) override;

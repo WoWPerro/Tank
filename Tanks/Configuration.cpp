@@ -6,9 +6,10 @@ Configuration::Configuration()
 {
 }
 
-void Configuration::Input()
+bool Configuration::Input(int keyInput)
 {
 	std::cout << "Gamestate Configuration Input";
+	return false;
 }
 
 void Configuration::Update()

@@ -8,7 +8,6 @@ int main(int argc, char *argv[])
 {
 
 	GameStateManager manager;
-	manager.SetState(new Menu());
 	manager.SetState(new VideoState());
 	manager.GameLoop();
 	return 0;
