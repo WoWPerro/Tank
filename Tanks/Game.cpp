@@ -20,9 +20,14 @@ void Game::Draw()
 	std::cout << "Gamestate Game Draw";
 }
 
-void Game::Init()
+void Game::Init(Platform * platform)
 {
 	std::cout << "Gamestate Game Init";
+}
+
+void Game::Close()
+{
+	std::cout << "Gamestate Game Close";
 }
 
 Game::~Game()

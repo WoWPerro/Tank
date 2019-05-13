@@ -6,6 +6,14 @@ Menu::Menu()
 {
 }
 
+void Menu::Init(Platform * platform)
+
+{
+	this->platform = platform;
+	std::cout << "Gamestate Menu Init";
+	Background = new Image;
+}
+
 void Menu::Input()
 {
 	std::cout << "Gamestate Menu Input";
@@ -21,9 +29,9 @@ void Menu::Draw()
 	std::cout << "Gamestate Menu Draw";
 }
 
-void Menu::Init()
+void Menu::Close()
 {
-	std::cout << "Gamestate Menu Init";
+	std::cout << "Gamestate Menu Close";
 }
 
 Menu::~Menu()

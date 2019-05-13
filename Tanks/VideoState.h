@@ -7,7 +7,11 @@ public:
 	void Input() override;
 	void Update() override;
 	void Draw() override;
-	void Init() override;
+	void Init(Platform * platform) override;
+	void Close() override;
+private:
+	Platform * platform;
+	Image * background;
 	~VideoState();
 };
 

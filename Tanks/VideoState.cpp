@@ -6,6 +6,14 @@ VideoState::VideoState()
 {
 }
 
+void VideoState::Init(Platform * platform)
+{
+	std::cout << "Gamestate Video Input";
+	this->platform = platform;
+	background = new Image();
+	background->LoadImage("../Assets/Images/tankMenu.png");
+}
+
 void VideoState::Input()
 {
 	std::cout << "Gamestate Video Input";
@@ -19,11 +27,14 @@ void VideoState::Update()
 void VideoState::Draw()
 {
 	std::cout << "Gamestate Video Input";
+	platform->RenderClear();
+	platform->RenderImage(background, 0, 0);
+	platform->RenderPresent();
 }
 
-void VideoState::Init()
+void VideoState::Close()
 {
-	std::cout << "Gamestate Video Input";
+	std::cout << "Gamestate Video Close";
 }
 
 VideoState::~VideoState()

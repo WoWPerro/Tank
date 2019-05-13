@@ -13,17 +13,22 @@ void Configuration::Input()
 
 void Configuration::Update()
 {
-	std::cout << "Gamestate Configuration Input";
+	std::cout << "Gamestate Configuration Update";
 }
 
 void Configuration::Draw()
 {
-	std::cout << "Gamestate Configuration Input";
+	std::cout << "Gamestate Configuration Draw";
 }
 
-void Configuration::Init()
+void Configuration::Init(Platform * platform)
 {
-	std::cout << "Gamestate Configuration Input";
+	std::cout << "Gamestate Configuration Init";
+}
+
+void Configuration::Close()
+{
+	std::cout << "Gamestate Configuration Close";
 }
 
 Configuration::~Configuration()
